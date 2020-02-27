@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="uft-8">
+        <title>Bora</title>
+    </head>
+    <body>
+
+
+        <script>
+        var myPromise = function(idade){
+        return new Promise(function(resolve, reject){
+
+            if(idade>18){
+                //200 -> ID de sucesso
+                resolve(idade);
+                var response = 'Mais de 18 anos';
+                
+            } else{
+                reject('Menos de 18 anos');
+            }
+
+            
+        });
+    }
+
+    myPromise(17)
+    .then(function(response){
+        console.log('Mais de 18 anos');
+    })
+    .catch(function(error){
+        
+        console.log('Menos de 18 anos');
+    });
+        </script>
+    </body>
+</html>
